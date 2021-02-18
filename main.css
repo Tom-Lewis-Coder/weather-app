@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'montserrat', sans-serif;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: top center;
+}
+
+.app-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4));
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 15px 15px;
+}
+
+header input {
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(246, 246, 246, 0.4);
+    border-radius: 16px 0px 16px 0px;
+    border-bottom: 2px solid rgba(246, 246, 246, 1);
+
+    color: #313131;
+    font-size: 15px;
+    font-weight: 200;
+    transition: 0.2s ease-out;
+}
+
+header input:focus {
+    background-color:rgba(246, 246, 246, 0.85);
+}
+
+main {
+    flex: 1 1 100%;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.location .city {
+    color: ghostwhite;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 1px 2px rgb(5, 5, 5, 0.6);
+}
+
+.location .date {
+    color: ghostwhite;
+    font-size: 20px;
+    text-shadow: 1px 1px rgb(5, 5, 5, 0.6);
+}
+
+.current .temp {
+    color: ghostwhite;
+    font-size: 75px;
+    font-weight: 750;
+    margin: 15px 0px;
+    text-shadow: 1px 5px rgb(5, 5, 5, 0.6);
+}
+
+.current .temp span {
+    font-weight: 500;
+}
+
+.current .weather {
+    color: ghostwhite;
+    font-size: 25px;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-shadow: 0px 1px rgb(5, 5, 5, 0.6);
+}
+
+.current .hi-low {
+    color: ghostwhite;
+    font-size: 20px;
+    font-weight: 350;
+    text-shadow: 0px 1px rgb(5, 5, 5, 0.6);
+}
