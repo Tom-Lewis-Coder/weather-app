@@ -1,5 +1,5 @@
 const api = {
-    key: ' ',
+    key: 'c5a3da79e6f253015e9c856837f98a0c',
     base: 'http://api.openweathermap.org/data/2.5/'
 }
 
@@ -33,13 +33,11 @@ function displayResults(weather) {
   
   let weather_el = document.querySelector('.current .weather')
   weather_el.innerText = weather.weather[0].main
-
-  // let weather_icon = document.querySelector('.current .weather_icon') incorrect method
+ 
   let x = document.getElementsByClassName('weather_icon')[0]
   let icon = weather.weather[0].icon
   x.src = `http://openweathermap.org/img/wn/${icon}@2x.png`
-  // weather_icon.set = `http://openweathermap.org/img/wn/${icon}@2x.png` incorrect method
-
+   
   let hilow = document.querySelector('.hi-low')
   hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`
 }
