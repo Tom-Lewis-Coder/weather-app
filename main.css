@@ -16,7 +16,7 @@ body {
     width: 300px;
     min-width: 300px;
     height: 75%;
-    background-color: rgba(4, 4, 250, 0.7);
+    background-color: rgb(45, 45, 250);
     border-radius: 15px;
     box-shadow: 0 10px 20px yellow;
 }
