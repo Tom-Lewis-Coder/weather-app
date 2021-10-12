@@ -20,7 +20,6 @@ function getResults(query) {
 }
 
 function displayResults(weather) {
-  console.log(weather)
   let city = document.querySelector('.location .city')
   city.innerText = `${weather.name}, ${weather.sys.country}`
 
@@ -33,11 +32,11 @@ function displayResults(weather) {
   
   let weather_el = document.querySelector('.current .weather')
   weather_el.innerText = weather.weather[0].main
- 
+
   let x = document.getElementsByClassName('weather_icon')[0]
   let icon = weather.weather[0].icon
   x.src = `http://openweathermap.org/img/wn/${icon}@2x.png`
-   
+  
   let hilow = document.querySelector('.hi-low')
   hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`
 }
