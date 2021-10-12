@@ -8,15 +8,16 @@ body {
     font-family: 'montserrat', sans-serif;
     background-size: cover;
     background-position: top center;
-    background-color: rgb(179, 223, 250);
+    background-image: url('background.jpg');
 }
 
 .app-wrap {
     margin: auto;
+    margin-top: 30px;
     width: 300px;
     min-width: 300px;
     height: 75%;
-    background-color: rgb(45, 45, 250);
+    background-color: rgb(60, 60, 247);
     border-radius: 15px;
     box-shadow: 0 10px 20px yellow;
 }
@@ -96,4 +97,4 @@ main {
     font-size: 20px;
     font-weight: 350;
     text-shadow: 0px 1px rgb(5, 5, 5, 0.6);
-}
+} 
