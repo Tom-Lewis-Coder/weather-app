@@ -25,6 +25,18 @@ function getResults(query) {
     })
 }
 
+function dateBuilder(d) {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  
+    let day = days[d.getDay()]
+    let date = d.getDate()
+    let month = months[d.getMonth()]
+    let year = d.getFullYear()
+  
+    return `${day} ${date} ${month} ${year}`
+  }
+
 function showContainer2(){
     return document.getElementById("app-wrap2").style.display = "block";
 }
@@ -61,22 +73,11 @@ console.log(weather)
   let windSpeed = document.querySelector('.windSpeed')
   windSpeed.innerText = `Wind Speed : ${Math.round(weather.wind.speed * 2.23694)}mph`
 
+  let poles = ['North', 'N East', 'East', 'S East', 'South', 'S West', 'West', 'N West', 'North']
   let windDirection = document.querySelector('.windDirection')
-  windDirection.innerText = `Wind Direction : ${weather.wind.deg}\u00B0`
+  windDirection.innerText = `Wind Direction : ${poles[Math.round(weather.wind.deg / 45)]}`
 
   let visibility = document.querySelector('.visibility')
   visibility.innerText = `Visibility : ${weather.visibility / 1000}km`
     
-}
-
-function dateBuilder(d) {
-  let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
-  let day = days[d.getDay()]
-  let date = d.getDate()
-  let month = months[d.getMonth()]
-  let year = d.getFullYear()
-
-  return `${day} ${date} ${month} ${year}`
 }

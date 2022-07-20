@@ -8,7 +8,8 @@ body {
     font-family: 'montserrat', sans-serif;
     background-size: cover;
     background-position: top center;
-    background-image: url('background.jpg');
+    background-image: linear-gradient(to bottom right, rgb(41, 42, 124), rgb(32, 158, 167));
+    background-attachment: fixed;
 }
 
 main {
@@ -23,15 +24,18 @@ main {
     min-width: 300px;
     height: 525px;
     min-height: 525px;
-    background-color: rgb(163, 162, 162);
     border-radius: 15px;
     border: 1px solid rgb(68, 68, 68);
-    box-shadow: 0 5px 10px rgb(255, 255, 224);
-    opacity: 1;
+    box-shadow: 0 4px 8px rgb(7, 7, 7);
+}
+
+.app-wrap {
+    background-image: linear-gradient(to bottom right, darkorange, rgb(236, 236, 43));
 }
 
 #app-wrap2 {
     display: none;
+    background-image: linear-gradient(to bottom right, rgb(100, 98, 98), rgb(31, 29, 29));
 }
 
 header {
@@ -88,7 +92,7 @@ header input:hover, header input:focus {
     font-size: 70px;
     font-weight: 750;
     margin: 15px 0px;
-    text-shadow: 1px 5px rgb(5, 5, 5, 0.6);
+    text-shadow: 1px 3px rgb(5, 5, 5, 0.6);
 }
 
 .current .temp span {
@@ -123,7 +127,7 @@ header input:hover, header input:focus {
 
 .humidity {
     color: ghostwhite;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 40px;
     margin-bottom: 30px;
     text-shadow: 1px 2px rgb(5, 5, 5, 0.6);
@@ -131,21 +135,21 @@ header input:hover, header input:focus {
 
 .windSpeed {
     color: ghostwhite;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px;
     text-shadow: 1px 2px rgb(5, 5, 5, 0.6);
 }
 
 .windDirection {
     color: ghostwhite;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px;
     text-shadow: 1px 2px rgb(5, 5, 5, 0.6);
 }
 
 .visibility {
     color: ghostwhite;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 30px;
     text-shadow: 1px 2px rgb(5, 5, 5, 0.6);
 }
