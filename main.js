@@ -14,12 +14,27 @@ function setQuery(evt) {
 
 function getResults(query) {
     fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
-    .then(weather => {
-        return weather.json()
-    }).then(displayResults)
+    .then(response => { if (response.ok) { return response.json() }
+        throw new Error('Please enter a valid locaton')
+    }).then(responseJson => {
+        displayResults(responseJson)
+        showContainer2()
+    }).catch(error => {
+        hideContainer2()
+        alert(error)
+    })
+}
+
+function showContainer2(){
+    return document.getElementById("app-wrap2").style.display = "block";
+}
+
+function hideContainer2() {
+    return document.getElementById("app-wrap2").style.display = "none";
 }
 
 function displayResults(weather) {
+console.log(weather)
   let city = document.querySelector('.location .city')
   city.innerText = `${weather.name}, ${weather.sys.country}`
 
@@ -28,7 +43,7 @@ function displayResults(weather) {
   date.innerText = dateBuilder(now)
 
   let temp = document.querySelector('.current .temp')   
-  temp.innerHTML = `${Math.round(weather.main.temp)}<span>°c</span>`
+  temp.innerHTML = `${Math.round(weather.main.temp)}\u00B0c`
   
   let weather_el = document.querySelector('.current .weather')
   weather_el.innerText = weather.weather[0].main
@@ -38,7 +53,20 @@ function displayResults(weather) {
   x.src = `http://openweathermap.org/img/wn/${icon}@2x.png`
   
   let hilow = document.querySelector('.hi-low')
-  hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`
+  hilow.innerText = `${Math.round(weather.main.temp_min)} / ${Math.round(weather.main.temp_max)}\u00B0c`
+  
+  let humidity = document.querySelector('.humidity')
+  humidity.innerText = `Humidity : ${weather.main.humidity}%`
+
+  let windSpeed = document.querySelector('.windSpeed')
+  windSpeed.innerText = `Wind Speed : ${Math.round(weather.wind.speed * 2.23694)}mph`
+
+  let windDirection = document.querySelector('.windDirection')
+  windDirection.innerText = `Wind Direction : ${weather.wind.deg}\u00B0`
+
+  let visibility = document.querySelector('.visibility')
+  visibility.innerText = `Visibility : ${weather.visibility / 1000}km`
+    
 }
 
 function dateBuilder(d) {

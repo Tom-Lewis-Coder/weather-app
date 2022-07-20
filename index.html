@@ -5,23 +5,35 @@
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <div class="app-wrap">
-        <header>
-            <input type="text" autocomplete="off" class="search-box" placeholder="Search..." />
-        </header>
-        <main>
-            <section class="location">
-                <div class="city">London, GB</div>
-                <div class="date">Tuesday 31st August 2021</div>
-            </section>
-            <div class="current">
-                <div class="temp">19<span>°c</span></div>
-                <div class="weather">Sunny</div>
-                <img class="weather_icon" src=http://openweathermap.org/img/wn/01d@2x.png />
-                <div class="hi-low">15°c / 21°c</div>
+    <main>
+        <div class="app-wrap">
+            <div class="container1">
+                <header>
+                    <input type="text" autocomplete="off" class="search-box" placeholder="Type location and press enter..." />
+                </header>
+                <section class="location">
+                    <div class="city"></div>
+                    <div class="date"></div>
+                </section>
+                <div class="current">
+                    <div class="temp"></div>
+                    <div class="weather"></div>
+                    <img class="weather_icon" />
+                    <div class="hi-low"></div>
+                </div>
             </div>
-        </main>
-    </div>
+        </div>
+            <div class="app-wrap2" id="app-wrap2"
+                <div class="container2">
+                    <div class="current2">
+                        <div class="humidity"></div>
+                        <div class="windSpeed"></div>
+                        <div class="windDirection"></div>
+                        <div class="visibility"></div>
+                    </div>
+                </div>
+            </div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
