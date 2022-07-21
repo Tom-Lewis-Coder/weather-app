@@ -1,6 +1,6 @@
 # Weather-App
 
-This app is designed to fetch the current weather from any city in the world. Upon entering the name of a city, the user will be provided with the current temp/conditions plus humidity, wind, visibility, pressure and sunrise/sunset times. 
+This app is designed to fetch the current weather from any city in the world. Upon entering the name of a city, the user will be provided with the current temp/conditions plus the humidity, wind, visibility, pressure and sunrise/sunset times. 
 
 ![](weatherAppJS.gif)
 
