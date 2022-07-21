@@ -80,4 +80,12 @@ console.log(weather)
   let visibility = document.querySelector('.visibility')
   visibility.innerText = `Visibility : ${weather.visibility / 1000}km`
     
+  let pressure = document.querySelector('.pressure')
+  pressure.innerText = `Pressure : ${weather.main.pressure}mb`
+
+  let sunrise = document.querySelector('.sunrise')
+  sunrise.innerText = `Sunrise : ${new Date(weather.sys.sunrise * 1000).toString().split(' ')[4]} GMT`
+
+  let sunset = document.querySelector('.sunset')
+  sunset.innerText = `Sunset : ${new Date(weather.sys.sunset * 1000).toString().split(' ')[4]} GMT`
 }
